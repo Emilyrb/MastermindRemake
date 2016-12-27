@@ -1,5 +1,6 @@
 # MastermindRemake
-Similar remake to the game Mastermind
+Similar remake to the game Mastermind.
+
 Instructions
 
 Click the largre circles to change the colours for your guess and click submit to check whether the code is wrong/right.
