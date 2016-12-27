@@ -9,13 +9,13 @@ $(document).ready(function () {
 	//alert(randomCode);
 	
 	var row='<div class="row"><div class="guess1"></div><div class="guess2"></div><div class="guess3"></div><div class="guess4"></div><div class="ans1"></div><div class="ans2"></div><div class="ans3"></div><div class="ans4"></div><input type="submit" id="check"></div>';
-	$('body').append(row.repeat(10));
+	$('#game').append(row.repeat(10));
 	
 	function restart(){
 		next();
 		usedLives = 1;
 		randomCode = [colours[Math.floor(Math.random() * colours.length)],colours[Math.floor(Math.random() * colours.length)],colours[Math.floor(Math.random() * colours.length)],colours[Math.floor(Math.random() * colours.length)]];
-		$('body').html(row.repeat(10));
+		$('#game').html(row.repeat(10));
 	}
 	function next(){
 		colourCount1 = 0;
@@ -121,17 +121,17 @@ $(document).ready(function () {
 		} 
 		
 		//check if player won game
-		if (randomCode[0] == colours[colourCount1] && randomCode[1] == colours[colourCount2] && randomCode[2] == colours[colourCount3] &&randomCode[3] == colours[colourCount4]){
+		if (randomCode[0] == colours[colourCount1] && randomCode[1] == colours[colourCount2] && randomCode[2] == colours[colourCount3] && randomCode[3] == colours[colourCount4]){
 			if (usedLives == 1){
-				word='try'
+				word='try';
 			} else{
-				word='tries'
+				word='tries';
 			}
-			$('body').append('<div id="end">You won in '+usedLives+' ' + word +'!<br/>Play Again?<div id="yes">Yes</div><div id="no">No</div></div>')
+			$('#game').append('<div id="end">You won in '+usedLives+' ' + word +'!<br/>Play Again?<div id="yes">Yes</div><div id="no">No</div></div>')
 		} 
 		//check if all lives used
-		if(usedLives == 10 && (randomCode[0] != colours[colourCount1] && randomCode[1] != colours[colourCount2] && randomCode[2] != colours[colourCount3] &&randomCode[3] != colours[colourCount4])){
-			$('body').append('<div id="end">You lost :\(<br/>Play Again?<div id="yes">Yes</div><div id="no">No</div></div>')
+		if(usedLives == 10 && (randomCode[0] != colours[colourCount1] && randomCode[1] != colours[colourCount2] && randomCode[2] != colours[colourCount3] && randomCode[3] != colours[colourCount4])){
+			$('#game').append('<div id="end">You lost :\(<br/>Play Again?<div id="yes">Yes</div><div id="no">No</div></div>')
 		}
 		usedLives++;
 		next();
