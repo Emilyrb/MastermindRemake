@@ -5,12 +5,13 @@ html,body{
 	height:100%;
 }
 
-.row{
+.row,.inactiveRow{
 	width:500px;
 	height:30px;
 	display:block;
+	margin:15px;
 }
-#guess1,#guess2,#guess3,#guess4{
+.guess1,.guess2,.guess3,.guess4,#inactiveGuess1,#inactiveGuess2,#inactiveGuess3,#inactiveGuess4{
 	height:30px;
 	width:30px;
 	border-radius:100%;
@@ -18,10 +19,14 @@ html,body{
 	display:inline-block;
 	margin:5px;
 }
-#ans1,#ans2,#ans3,#ans4{
+.ans1,.ans2,.ans3,.ans4,#inactiveAns1,#inactiveAns2,#inactiveAns3,#inactiveAns4{
 	height:20px;
 	width:20px;
 	border-radius:100%;
 	border:1px solid black;
 	display:inline-block;
+}
+.inactiveBtn {
+    pointer-events: none;
+    opacity: 0.4;
 }
