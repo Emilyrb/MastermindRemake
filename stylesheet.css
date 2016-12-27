@@ -3,30 +3,77 @@ html,body{
 	padding:0;
 	width:100%;
 	height:100%;
+	text-align:center;
+	background: #46c2db;
+	background: -moz-linear-gradient(-45deg, #46c2db 0%, #9b75d8 100%);
+	background: -webkit-linear-gradient(-45deg, #46c2db 0%,#9b75d8 100%);
+	background: linear-gradient(135deg, #46c2db 0%,#9b75d8 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#46c2db', endColorstr='#9b75d8',GradientType=1 );
 }
 
-.row,.inactiveRow{
-	width:500px;
+.row{
+	position:relative;
+	width:330px;
 	height:30px;
 	display:block;
-	margin:15px;
+	margin:10px auto;
 }
-.guess1,.guess2,.guess3,.guess4,#inactiveGuess1,#inactiveGuess2,#inactiveGuess3,#inactiveGuess4{
+.guess1,.guess2,.guess3,.guess4{
 	height:30px;
 	width:30px;
 	border-radius:100%;
-	border:1px solid black;
 	display:inline-block;
 	margin:5px;
+	background: white;
 }
-.ans1,.ans2,.ans3,.ans4,#inactiveAns1,#inactiveAns2,#inactiveAns3,#inactiveAns4{
+.ans1,.ans2,.ans3,.ans4{
 	height:20px;
 	width:20px;
 	border-radius:100%;
-	border:1px solid black;
 	display:inline-block;
+	background: #9b75d8;
+	background: -moz-linear-gradient(-45deg, #9b75d8 15%, #46c2db 94%);
+	background: -webkit-linear-gradient(-45deg, #9b75d8 15%,#46c2db 94%);
+	background: linear-gradient(135deg, #9b75d8 15%,#46c2db 94%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9b75d8', endColorstr='#46c2db',GradientType=1 );
+	box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2), 0 4px 18px 0 rgba(0, 0, 0, 0.05);
+	margin-left:5px;
 }
-.inactiveBtn {
-    pointer-events: none;
-    opacity: 0.4;
+#check{
+	margin-left:5px;
+	border-radius:7px;
+	border:2px solid lightgreen;
+	background-color:transparent;
+	color:lightgreen;
+}
+#check:hover{
+	background-color:lightgreen;
+	color:white;
+}
+#end{
+	position:absolute;
+	left:40%;
+	top:200px;
+	width:200px;
+	height:150px;
+	background-color:black;
+	color:white;
+	font-size:20px;
+	padding:10px;
+	opacity:0.6;
+}
+#yes,#no{
+	position:absolute;
+	width:70px;
+	height:30px;
+	bottom:5px;
+	padding:15px;
+}
+#yes{
+	background-color:green;
+	left:5px;
+}
+#no{
+	background-color:red;
+	right:5px;
 }
